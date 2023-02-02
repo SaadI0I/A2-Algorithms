@@ -2,14 +2,14 @@ Imports System
 
 Module Program
     Class Customer
-        Private ShareHolderName As String
+        Private ShareHolderName As String  '<---- Properties
         Private CustomerID As String
         Private PurchaseDate As Date
         Private NumberOfShares As Integer
         Private PerShareValue As Double
         Private NetValue As Double
 
-        Public Sub New(ByVal SHN As String, ByVal CI As String, ByVal PD As Date, ByVal NOS As Integer, ByVal PSV As Double, ByVal NV As Double)
+        Public Sub New(ByVal SHN As String, ByVal CI As String, ByVal PD As Date, ByVal NOS As Integer, ByVal PSV As Double, ByVal NV As Double) '<--- Constructor
             ShareHolderName = SHN
             CustomerID = CI
             PurchaseDate = PD
@@ -68,7 +68,7 @@ Module Program
 
     End Class
     Sub Main(args As String())
-        Dim Transac As New Customer("X", "0001", #02/02/2023#, 11, 10.0, 21.21)
+        Dim Transac As New Customer("X", "0001", #02/02/2023#, 11, 10.0, 21.21)  '<---- To remove the "New" error, initialise data 
         Console.WriteLine(Transac.GetterSHN())
         Console.WriteLine(Transac.GetterCI())
         Console.WriteLine(Transac.GetterPD())
